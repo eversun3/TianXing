@@ -1,0 +1,3 @@
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="0">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:8080/springmvc03/user.jsp|*|http\://localhost\:8080/springmvc03/userController.do|*|http\://localhost\:8080/springmvc03/userInfo.do|*|http\://localhost\:8080/springmvc03/user.do|*|http\://localhost\:8080/springmvc02/hello.do|*|http\://localhost\:8080/springmvc02/hello.jsp|*|http\://localhost\:8080/springmvc01/hello.do|*|http\://localhost\:8080/springmvc01/hello.jsp|*|http\://localhost\:8080/springmvc01/view/hello.do|*|http\://localhost\:8080/springmvc01/hello.do%22%22|*|
