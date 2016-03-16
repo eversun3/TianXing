@@ -1,0 +1,16 @@
+package com.tianxing.first;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class annotationController {
+
+	@RequestMapping(value="/view/first.action")
+	public String annotation(String hello, Model model){
+		
+		model.addAttribute("helloworld", "Hello " + hello);
+		return "index";
+	}
+}

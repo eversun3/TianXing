@@ -1,0 +1,43 @@
+1、工程运行时需在buildpath-addlibrary-serverruntime下设置tomcat
+2、ModelAndView modelAndView = new ModelAndView("index");
+  modelAndView.addObject("helloworld", " hello "+ first);
+       跳转到view并传值
+3、路径配置值得注意
+<property name="prefix" value="/WEB-INF/front/"></property>
+<bean name="/view/first.action" class="com.tianxing.first.firstController"></bean>
+
+不加注解的配置方式
+<!-- 配置handler mapping -->
+  	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">	 
+ 	</bean>  
+ 	
+  <!-- 配置Controller -->
+  <bean name="/view/first.action" class="com.tianxing.first.firstController"></bean>	 
+ 	
+注解方式配置方式
+<!-- SpringMVC 注解驱动 -->
+ 	<mvc:annotation-driven/>
+ 	<!-- 扫描器 -->
+ 	<context:component-scan base-package="com"></context:component-scan>
+ 	
+<form action="/TianXingServer/firstController.action" method="post">
+form表单提交时如果没有填写绝对路径，有时就会定位到相对路径下的firstController.action,后面的hanlerMapping配置需要
+写成/view/first。action这种，如果这里使用绝对路径就可以省去麻烦（上边的配置就是/view/first.action,如果使用绝对路径
+form表单里可以写为/view/first.action，那么后面配置直接写first.action就行了） 这时使用的是根据类名handlermapping
+的映射方式
+
+@Controller
+@RequestMapping("/view/user")
+public class annotationController {
+
+获取界面参数方法
+1、通过设置HttpServletRequest request来获取界面参数
+public String add(HttpServletRequest request, HttpSession httpSession){
+		System.out.println("添加模块");
+		
+		String userName = request.getParameter("account");
+		String password = request.getParameter("password");
+2、通过Controller的参数与请求参数同名或起别名的方式接收
+@RequestMapping(value="add")
+	public String add(@RequestParam("userName")String account, String password){
+		System.out.println("添加模块");

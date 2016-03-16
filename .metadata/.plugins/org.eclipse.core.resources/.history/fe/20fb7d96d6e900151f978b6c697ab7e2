@@ -1,0 +1,7 @@
+1、工程运行时需在buildpath-addlibrary-serverruntime下设置tomcat
+2、ModelAndView modelAndView = new ModelAndView("index");
+  modelAndView.addObject("helloworld", " hello "+ first);
+       跳转到view并传值
+3、路径配置值得注意
+<property name="prefix" value="/WEB-INF/front/"></property>
+<bean name="/view/first.action" class="com.tianxing.first.firstController"></bean>

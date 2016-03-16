@@ -1,0 +1,14 @@
+package com.tianxing.first;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class annotationController {
+
+	
+	public String annotation(String name, Model model){
+		
+		return index;
+	}
+}

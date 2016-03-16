@@ -1,0 +1,24 @@
+package com.tianxing.first;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/user")
+public class annotationController {
+
+	@RequestMapping(value="/view/first.action")
+	public String annotation(String hello, Model model){
+		
+		System.out.println("Annotation test");
+		model.addAttribute("helloworld", "Hello " + hello);
+		return "index";
+	}
+	
+	public String list() {
+		System.out.println("查询模块");
+		
+		return "/TianXingServer/WebContent/view/user_list"；
+	}
+}

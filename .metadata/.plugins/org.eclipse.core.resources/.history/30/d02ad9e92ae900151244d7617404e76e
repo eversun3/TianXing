@@ -1,0 +1,4 @@
+1、工程运行时需在buildpath-addlibrary-serverruntime下设置tomcat
+2、ModelAndView modelAndView = new ModelAndView("index");
+  modelAndView.addObject("helloworld", " hello "+ first);
+       跳转到view并传值
